@@ -112,18 +112,6 @@ namespace iEye
 
         onNewRegionAvailable();
 
-		// Update the horizontal intervals
-//		calcInterval(QPoint(m_eyeRegion.left(), m_eyeRegion.right()),  // Span of the interval
-//				     m_eyeRegion.width() / m_hQL, // Size of each interval
-//					 m_hIntervals // Vector containnig all the interval information
-//                     );
-
-//        // Update the vertical intervals
-//        calcInterval(QPoint(m_eyeRegion.top(), m_eyeRegion.bottom()),  // Span of the interval
-//                     m_eyeRegion.height() / m_vQL, // Size of each interval
-//                     m_vIntervals // Vector containnig all the interval information
-//                     );
-
 		m_onDuty = true;
 		startSampling();
 	}

@@ -38,11 +38,8 @@ namespace iEye
 				//assert(row_ptr != NULL);
 				for(int j = 0; j < input.size().width; ++j)
 				{
-					/*input.at<int>(i,j);
-					printf("location %d\n", input.at<int>(i,j));*/
-					//int pxVal(input.at<int>(i, j));
+
 					int pxVal(static_cast<int>(row_ptr[j]));
-				//printf("Pixel Value at (%d, %d) is %d \n", i, j, pxVal);
 					
 					if (pxVal > th)
 					{
@@ -260,11 +257,6 @@ namespace iEye
 										min_sum = (int)window_sum[0];
                                         // Fill up the min_sum vector
                                         min_queue.fill(min_sum);
-//										min_sum2 = min_sum + 1;
-//										min_sum3 = min_sum + 2;
-//										min_queue.push_back(min_sum3);
-//										min_queue.push_back(min_sum2);
-//										min_queue.push_back(min_sum);
 								}
 
 				}
@@ -280,15 +272,9 @@ namespace iEye
                 {
 					min_queue.pop_front(); // Remove the largest among the three
                     min_queue.push_back((int)window_sum[0]); // Push the new minimum into the queue
-//					min_rb3 = min_rb2;
-//					min_cb3 = min_cb2;
-//					min_rb2 = min_rb1;
-//					min_cb2 = min_cb1;
                     // Shift the block counters to front
                     min_queue_bc.pop_front();
                     min_queue_bc.push_back(QPoint(rb_count, cb_count));
-//                    min_rb1 = rb_count;
-//                    min_cb1 = cb_count;
                 }
 		/*
 				if ((int)window_sum[0] <= min_sum)
